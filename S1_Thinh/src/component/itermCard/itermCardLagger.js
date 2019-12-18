@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ItermCardSmall() {
+function ItermCardLagger() {
   
   return (
     <div >
@@ -9,4 +9,4 @@ function ItermCardSmall() {
   );
 }
 
-export default ItermCardSmall;
+export default ItermCardLagger;

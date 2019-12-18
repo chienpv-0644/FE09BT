@@ -1,0 +1,17 @@
+.main{
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    height: 1000px;
+    background-color: rgba(214, 240, 231, 0.87);
+}
+.mainContent{
+    width: 68%;
+    background-color: blueviolet;
+}
+.sideBar{
+    width: 30%;
+    background-color: aquamarine;
+}
