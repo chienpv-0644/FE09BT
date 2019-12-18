@@ -1,0 +1,10 @@
+.mainContent {
+    flex: 75%;
+    padding-right: 10px;
+}
+
+@media only all and (max-width: 992px) {
+    .mainContent {
+        padding-right: 0;
+    }
+}

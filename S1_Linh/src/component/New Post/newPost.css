@@ -1,0 +1,16 @@
+.newPost {
+    width: 285px;
+}
+
+@media only all and (max-width: 992px) {
+    .newPost {
+        width: 730px;
+        margin: 15px auto 0;
+    }
+}
+
+@media only all and (max-width: 768px) {
+    .newPost {
+        width: 100%;
+    }
+}

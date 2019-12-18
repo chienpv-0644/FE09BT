@@ -1,0 +1,41 @@
+.cardContent {
+    flex: 50%;
+    padding-left: 15px;
+}
+
+.cardContent__title {
+    color: blue;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.cardContent__subTitle {
+    color: gray;
+}
+
+.cardContent__text {
+    line-height: 25px;
+}
+.cardContent__button  {
+    display: inline-block;
+    font-size: 14px;
+    padding: 10px;
+    color: #4e4b4b;
+    background-color: #d3d3d3;
+    border: none;
+}
+
+.cardContent__button:hover {
+    background-color: #dedede;
+    text-decoration: none;
+}
+
+.checked {
+    color: #ffc261;
+}
+
+@media only all and (max-width: 768px) {
+    .cardContent {
+        padding: 0;
+    }
+}
