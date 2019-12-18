@@ -1,10 +1,10 @@
 import React from 'react';
 
-function ItermCardLagger() {
+function ItermCardLagger(props) {
   
   return (
     <div >
-        hhhhhhhhhhhhhh
+        {props.children}
     </div>
   );
 }
