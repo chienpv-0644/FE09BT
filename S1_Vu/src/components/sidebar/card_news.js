@@ -29,7 +29,8 @@ class Card_news extends React.Component {
         };
 
         var styleText = {
-            fontSize: " 16px"
+            fontSize: " 16px",
+            textDecoration: "none"
         };
         return (
           <div>
@@ -38,8 +39,8 @@ class Card_news extends React.Component {
                 <img src={hinh6} style={styleImgNews} />
               </div>
               <div style={styleCardContent}>
-                <a href="#">
-                  <h4 style={styleText}>Hãy sẵn sàng với serveriess</h4>
+                <a href="#" style={styleText}>
+                  <h4>Hãy sẵn sàng với serveriess</h4>
                 </a>
                 <p style={styleText}>
                   Th12 18 2019 | Công nghệ. hệ điều hành. Máy chủ web. Môi
@@ -52,10 +53,8 @@ class Card_news extends React.Component {
                 <img src={hinh7} style={styleImgNews} />
               </div>
               <div style={styleCardContent}>
-                <a href="#">
-                  <h4 style={styleText}>
-                    Fullstack Station chuyển tên miền từ Business Card
-                  </h4>
+                <a href="#" style={styleText}>
+                  <h4>Fullstack Station chuyển tên miền từ Business Card</h4>
                 </a>
                 <p style={styleText}>Th6 18 2019 | Giao lưu</p>
               </div>
@@ -65,10 +64,8 @@ class Card_news extends React.Component {
                 <img src={hinh8} style={styleImgNews} />
               </div>
               <div style={styleCardContent}>
-                <a href="#">
-                  <h4 style={styleText}>
-                    Áp dụng các chiêu thức võ học vào lập trình
-                  </h4>
+                <a href="#" style={styleText}>
+                  <h4>Áp dụng các chiêu thức võ học vào lập trình</h4>
                 </a>
                 <p style={styleText}>Th6 18 2019 | Lập trình</p>
               </div>
@@ -78,8 +75,8 @@ class Card_news extends React.Component {
                 <img src={hinh9} style={styleImgNews} />
               </div>
               <div style={styleCardContent}>
-                <a href="#">
-                  <h4 style={styleText}>
+                <a href="#" style={styleText}>
+                  <h4>
                     Kinh nghiệm dành cho người mới bắt đầu lập trình Python
                   </h4>
                 </a>

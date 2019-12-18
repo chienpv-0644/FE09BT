@@ -11,7 +11,8 @@ class Card_content extends React.Component {
 
         var styleH3 = {
             color: "#1E90FF",
-            fontWeigth: 700
+            fontWeigth: 700,
+            textDecoration: "none"
         };
 
         var stylePosted = {
@@ -26,7 +27,7 @@ class Card_content extends React.Component {
 
         return (
             <div style={styleCardContent}>
-                <a  href="#" ><h4 style={styleH3}>{this.props.title}</h4></a>
+                <a  href="#" style={styleH3}><h4 >{this.props.title}</h4></a>
                 <p style={stylePosted}>{this.props.posted}</p>
                 <p style={styleContent}>{this.props.content}</p>
                 <input type="button" value="READ MORE"/>
