@@ -1,0 +1,38 @@
+[
+    { 
+        "title":"Sát Tết, ô tô giá rẻ gần 300 triệu từ Indonesia lại ồ ạt về Việt Nam",
+        "rated": "5",
+        "authour":"Piter",
+        "href":"./public/imagine/photo1.jpg",
+        "textIntro":"Trong tháng 11 vừa qua, lượng ô tô nhập khẩu từ Indonesia vẫn đứng đầu thị trường và cao gần gấp rưỡi Thái Lan trong khi mức giá trung bình lại giảm kỷ lục còn 12,3 nghìn USD" 
+    },
+    { 
+        "title":"'Ông lớn' Lũng Lô 5, Hoàng Hà... trong danh sách nợ trăm tỷ tiền sử dụng đất",
+        "rated": "4.5",
+        "authour":"Piter",
+        "href":"./public/imagine/photo2.jpg",
+        "textIntro":"Các doanh nghiệp xây dựng, bất động sản (BĐS) như: Công ty CP Lũng Lô 5; Công ty CP Đầu tư và Xây dựng số 4 – Vạn Xuân; Công ty TNHH Xây dựng công trình Hoàng Hà; Công ty TNHH đá..." 
+    },
+    { 
+        "title":"Bitcoin thủng 7.000 USD, đối mặt ngưỡng kháng cự quan trọng",
+        "rated": "4",
+        "authour":"Piter",
+        "href":"./public/imagine/photo3.jpg",
+        "textIntro":"Nỗi lo về dài hạn của họ không phải là việc làm mà là không có đủ người trẻ để làm việc. Số dân trong độ tuổi lao động (từ 15 đến 64) đang suy giảm ở cả 4 nền kinh tế." 
+    },
+    { 
+        "title":"Cô gái đạt học bổng Tiến sĩ trị giá 9,3 tỷ VND của ĐH Johns Hopkins: Về Việt Nam giờ là một lựa chọn chứ không còn là thứ mình băn khoăn nữa!",
+        "rated": "3.5",
+        "authour":"Piter",
+        "href":"./public/imagine/photo4.png",
+        "textIntro":"Nguyễn Thị Sao Ly sinh ra trong gia đình có mẹ làm kinh doanh, ba làm giáo dục, anh trai là Tiến sĩ Vật lí tại Anh và chị gái là Thạc sĩ Kinh tế đồng thời là founder của một số..." 
+    },
+    { 
+        "title":"Giảng viên cao đẳng nhận thưởng Tết Nguyên đán 55 triệu đồng",
+        "rated": "5",
+        "authour":"Piter",
+        "href":"./public/imagine/photo5.jpg",
+        "textIntro":"Nếu trả lương chậm từ 15 ngày trở lên, “ông chủ” phải đền bù cho người lao động một khoàn tiền ít nhất bằng số tiền lãi suất ngân hàng." 
+    }
+
+]
