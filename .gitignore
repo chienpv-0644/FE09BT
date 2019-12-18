@@ -2,6 +2,8 @@
 
 # dependencies
 /S1_Thinh/node_modules
+/S1_Linh/node_modules
+.idea/
 /Th.zip
 /S1_Thinh/.pnp
 .pnp.js
