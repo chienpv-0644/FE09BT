@@ -7,10 +7,14 @@ function App() {
   let datas=JSON.stringify(myData);
   datas=JSON.parse(datas)
   return (
-    <div className="App">
-     <Maincontent className="Maincontent">{datas}
-       </Maincontent>
-     <SideBar className="SideBar" datas/>
+    
+    <div className="App" >
+     <Maincontent className="Maincontent">
+        {datas}
+      </Maincontent>
+     <SideBar className="SideBar">
+        {datas}
+      </SideBar>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import React from 'react';
-import ItermCardLagger from '../itermCard/itermCardLagger'
+import ItermCardSmall from '../itermCard/ItermCardSmall'
 
-function HeaderMainContent(){
+function HeaderMiniContent(){
   return (
     <h1 style={{borderBottom:'3px solid blue' } }>
         React
@@ -9,25 +9,25 @@ function HeaderMainContent(){
   )
 }
 
-function Maincontent(props) {
+function MiniContent(props) {
   const listIterms=props.children
   const blockk = listIterms.map((iterm,index) =>{
     return (
         <div key={index.toString()}>
-          <ItermCardLagger >
+          <ItermCardSmall >
                    {iterm}
-          </ItermCardLagger>
+          </ItermCardSmall>
         </div>
     )
   }
   
 )
   return (
-    <div style={{width:'75%' } }>
-        <HeaderMainContent/>
+    <div style={{width:'100%' } }>
+        <HeaderMiniContent/>
         {blockk}
     </div>
   )
 }
 
-export default Maincontent;
+export default MiniContent;

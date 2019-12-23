@@ -1,10 +1,14 @@
 import React from 'react';
-import ItermCardLagger from '../itermCard/itermCardSmall'
-
-function SideBar() {
+import RegisterForm from '../RegisterForm/RegisterForm'
+import MiniContent from '../miniContent/MiniContent'
+function SideBar(props) {
   return (
-    <div className="App">
-        <ItermCardLagger/>
+    <div style={{width:' 35%'}}>
+        <RegisterForm/>
+        <MiniContent>
+          {props.children}
+        </MiniContent>
+
     </div>
   );
 }
