@@ -1,0 +1,28 @@
+.taskItem{
+    width: 100%;
+}
+
+.taskItem table {
+    width: 100%;
+    
+}
+
+.taskItem table thead tr th{
+    border: 1px solid gray;
+}
+
+.taskItem table tr .stt {
+    width: 10%;
+}
+
+.taskItem table tr .nameTask {
+    width: 40%;
+}
+
+.taskItem  table tr .priceTask {
+    width: 30%;
+}
+
+.taskItem  table tr .addToCart {
+    width: 20%;
+}

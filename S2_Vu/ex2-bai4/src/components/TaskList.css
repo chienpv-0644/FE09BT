@@ -1,0 +1,27 @@
+.TaskList {
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.TaskList .search {
+    width: 100%;
+
+}
+
+.TaskList .tasklists {
+    width: 80%;
+    border: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+    margin: 50px auto;
+}
+
+
+.TaskList .search .searchDishs {
+    width: 50%;
+    float: right;
+
+}
