@@ -1,31 +1,10 @@
 import React, { Component } from "react";
-class Product extends Component {
+class CartProduct extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      // check: true
-    };
+    this.state = {};
   }
-  // Pay = () => {
-
-  //   if(this.state.check)
-  //   {
-  //     alert("Bạn có chắc chắn mua ?");
-  //   this.setState({
-  //     check: false
-  //   });
-  //   }
-  //   else
-  //   {
-  //     alert("Bạn có chắc muốn hủy ?");
-  //     this.setState({
-  //       check: true
-  //     });
-  //   }
-  // };
-
   render() {
-    //console.log(this.props);
     return (
       <>
         <div className="col-md-4 mb-5">
@@ -42,13 +21,8 @@ class Product extends Component {
               <p className="card-text">
                 <span className="badge badge-danger">{this.props.price}</span>
               </p>
-              <button
-                onClick={this.props.addToCart}
-                name={this.props.keyData}
-                value={this.props.name}
-                className="btn btn-primary"
-              >
-                Mua ngay
+              <button onClick={this.props.removeProduct} name={this.props.keyData} value={this.props.name} className="btn btn-primary">
+                {this.props.check ? "Hủy" : ""}
               </button>
             </div>
           </div>
@@ -58,4 +32,4 @@ class Product extends Component {
   }
 }
 
-export default Product;
+export default CartProduct;
