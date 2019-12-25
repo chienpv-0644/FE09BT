@@ -12,7 +12,7 @@
 }
 
 .TaskList .tasklists {
-    width: 80%;
+    width: 100%;
     border: 1px solid gray;
     display: flex;
     flex-direction: column;
@@ -24,4 +24,14 @@
     width: 50%;
     float: right;
 
+}
+
+.TaskList .yourCart {
+    width: 100%;
+    margin: auto;
+    border-top: 2px solid gray;
+}
+
+.TaskList .yourCart .Checkout {
+    width: 100%;
 }

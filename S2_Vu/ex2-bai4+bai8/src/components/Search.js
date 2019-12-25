@@ -30,6 +30,7 @@ class Search extends React.Component {
       keyword: ''
     })
   }
+
   render () {
     var { keyword } = this.state;
     return (

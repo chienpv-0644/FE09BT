@@ -1,10 +1,8 @@
-import React, { Children } from 'react';
+import React from 'react';
 import TaskForm from './components/TaskForm';
 import TaskList from './components/TaskList';
-import YourCart from './components/yourCart';
 import './App.css';
 
-var updateCart = [];
 class App extends React.Component {
   constructor (props) {
     super(props);
@@ -31,7 +29,7 @@ class App extends React.Component {
     };
   }
 
-  componentWillMount () {
+  componentDidMount () {
     if (localStorage && localStorage.getItem('tasks')) {
       var tasks = JSON.parse(localStorage.getItem('tasks'))
       this.setState({
@@ -64,17 +62,6 @@ class App extends React.Component {
     })
   }
 
-  // onUpdate = (update, count) => {
-  //   count = this.state.count + 1;
-  //   this.setState({
-  //     update : update,
-  //     count : count
-  //   })
-  //   console.log(update);
-  //   console.log(count);
-  //   // console.log(update.name + ' - ' + update.price + ' x ' + count); 
-  // }
-
 
   render () {
     var { tasks, isDisplayForm, keyword } = this.state;
@@ -103,15 +90,17 @@ class App extends React.Component {
                 onClick={ this.onToggleForm }>
                 <span className="fa fa-plus"></span> ADD DISHS
               </button>
-          </div> 
-          <TaskList onSearch={ this.onSearch } tasks={ tasks }/>
-        </div>
-        <div className="yourCart">
-          <h3>YOUR CART</h3>
-          <div className="showCart">
-            <YourCart />
+          </div>
+          <div>
+            <TaskList onSearch={ this.onSearch } tasks={ tasks }/>
           </div>
         </div>
+        {/* <div className="yourCart">
+          <h3>YOUR CART</h3>
+          <div className="showCart">
+            <YourCart onUpdate={ this.props.onUpdate }/>
+          </div>
+        </div> */}
       </div>
     );
   };

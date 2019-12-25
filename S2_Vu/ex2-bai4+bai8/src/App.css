@@ -85,7 +85,7 @@
 }
 
 .App .taskLisk {
-  width: 50%;
+  width: 90%;
   margin-left: 20px;
   border: 2px solid #336600;
 }
@@ -108,7 +108,7 @@
   cursor: pointer;
 }
 
-.App .yourCart {
+/* .App .yourCart {
   width: 30%;
   border: 2px solid #336600;
   margin-left: 20px;
@@ -125,4 +125,4 @@
   padding: 10px;
   margin-top: 30px;
   color: #AAAAAA;
-}
+} */
