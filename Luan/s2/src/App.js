@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import Product from "./Components/Product";
+import CartProduct from "./Components/CartProduct";
 
 class App extends Component {
   constructor(props) {
@@ -49,34 +50,36 @@ class App extends Component {
           price: "25.000 VND",
           status: true
         }
-      ]
+      ],
+      card : [],
+      con : []
     };
   }
-  Addproduct = () => {
-    let name = this.refs.name.value;
-    let price = this.refs.price.value;
-    let image = this.refs.image.value;
-    let status = true;
-    let obj = { name, price, image, status };
+  Addproduct = (e) => {
+    var name = this.refs.name.value;
+    var price = this.refs.price.value;
+    var image = this.refs.image.value;
+    var status = true;
+    var obj = { name, price, image, status };
     this.setState({
-      value: [...this.state.value, obj] // đẩy 1 đổi vào 1 mảng state chứa các đối tượng
+      value: [...this.state.value, obj]
     });
+    console.log(this.state.value);
   };
-  handelChange = e => {
+  handelChange = (e) => {
     if (e.target.value.trim() === "") {
-      this.state.value.map((item, index) => {
+      this.state.value.map((item) => {
         item.status = true;
         return true;
       });
       this.setState({
         value: this.state.value
       });
-      console.log(this.state.value);
     }
   };
-  Where = () => {
+  Where = (e) => {
     if (this.refs.text.value.trim() !== "") {
-      this.state.value.map((item, index) => {
+      this.state.value.map((item) => {
         if (this.refs.text.value.trim() !== item.name) {
           item.status = false;
         }
@@ -85,22 +88,78 @@ class App extends Component {
       this.setState({
         value: this.state.value
       });
-      console.log(this.state.value);
     } else {
       alert("Vui lòng nhập !");
     }
   };
+  addToCart = (e) => {
+    this.state.value.map((item) => {
+      if(item.name === e.target.value) { 
+        this.setState({
+          card: [...this.state.card, item]
+        });
+      }
+      return false;
+    });
+    // this.state.value.forEach(i => {
+    //   if (i.name === e.target.value) {
+    //     this.setState({
+    //       card : [...this.state.card, i]
+    //     });
+    //     if(this.state.cart.length===0){
+    //       this.setState({
+    //         cart:[i]
+    //       });
+    //     }else{
+    //       this.setState({
+    //         cart:[...this.state.cart, i]
+    //       });
+    //     }
+    //   }
+    // });
+    console.log(this.state.card);
+  };
+
+  removeProduct = (e) => {
+    for(let i = 0; i < this.state.card.length; i++) {
+      if(this.state.card[i].name === e.target.value) {
+        this.setState({
+          con : this.state.card.splice(i,1)
+        });
+      }
+    }
+    
+    console.log(this.state.con);
+  };
   render() {
+    var newProduct = this.state.card.map((item,index) => {
+      return(
+        <>
+        <CartProduct
+              key={index}
+              keyData={"card" + index}
+              image={item.image}
+              name={item.name}
+              price={item.price}
+              status={item.status}
+              check={true}
+              removeProduct={this.removeProduct}
+            />
+        </>
+      );
+    });
     var products = this.state.value.map((item, index) => {
       if (item.status === true) {
         return (
           <>
             <Product
               key={index}
+              keyData={"product" + index}
               image={item.image}
               name={item.name}
               price={item.price}
               status={item.status}
+              addToCart={this.addToCart}
             />
             <br />
           </>
@@ -149,85 +208,99 @@ class App extends Component {
           </div>
           <br />
           <div className="row">{products}</div>
-        </div>
 
-        <div>
-          <div
-            className="modal fade"
-            id="modalLoginForm"
-            tabIndex={-1}
-            role="dialog"
-            aria-labelledby="myModalLabel"
-            aria-hidden="true"
-          >
-            <div className="modal-dialog" role="document">
-              <div className="modal-content">
-                <div className="modal-header text-center">
-                  <h4 className="modal-title w-100 font-weight-bold">
-                    Thêm món ăn
-                  </h4>
-                  <button
-                    type="button"
-                    className="close"
-                    data-dismiss="modal"
-                    aria-label="Close"
-                  >
-                    <span aria-hidden="true">×</span>
-                  </button>
-                </div>
-                <div className="modal-body mx-3">
-                  <div className="md-form mb-5">
-                    <label
-                      data-error="wrong"
-                      data-success="right"
-                      htmlFor="defaultForm-email"
+          <div>
+            <div
+              className="modal fade"
+              id="modalLoginForm"
+              tabIndex={-1}
+              role="dialog"
+              aria-labelledby="myModalLabel"
+              aria-hidden="true"
+            >
+              <div className="modal-dialog" role="document">
+                <div className="modal-content">
+                  <div className="modal-header text-center">
+                    <h4 className="modal-title w-100 font-weight-bold">
+                      Thêm món ăn
+                    </h4>
+                    <button
+                      type="button"
+                      className="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
                     >
-                      Name
-                    </label>
-                    <input
-                      type="text"
-                      className="form-control validate"
-                      ref="name"
-                    />
+                      <span aria-hidden="true">×</span>
+                    </button>
                   </div>
-                  <div className="md-form mb-4">
-                    <label
-                      data-error="wrong"
-                      data-success="right"
-                      htmlFor="defaultForm-pass"
+                  <div className="modal-body mx-3">
+                    <div className="md-form mb-5">
+                      <label
+                        data-error="wrong"
+                        data-success="right"
+                        htmlFor="defaultForm-email"
+                      >
+                        Name
+                      </label>
+                      <input
+                        type="text"
+                        className="form-control validate"
+                        ref="name"
+                      />
+                    </div>
+                    <div className="md-form mb-4">
+                      <label
+                        data-error="wrong"
+                        data-success="right"
+                        htmlFor="defaultForm-pass"
+                      >
+                        Price
+                      </label>
+                      <input
+                        type="text"
+                        className="form-control validate"
+                        ref="price"
+                      />
+                    </div>
+                    <div className="md-form mb-4">
+                      <label
+                        data-error="wrong"
+                        data-success="right"
+                        htmlFor="defaultForm-pass"
+                      >
+                        Image
+                      </label>
+                      <input
+                        type="text"
+                        className="form-control validate"
+                        ref="image"
+                      />
+                    </div>
+                  </div>
+                  <div className="modal-footer d-flex justify-content-center">
+                    <button
+                      className="btn btn-danger"
+                      onClick={this.Addproduct}
                     >
-                      Price
-                    </label>
-                    <input
-                      type="text"
-                      className="form-control validate"
-                      ref="price"
-                    />
+                      ADD
+                    </button>
                   </div>
-                  <div className="md-form mb-4">
-                    <label
-                      data-error="wrong"
-                      data-success="right"
-                      htmlFor="defaultForm-pass"
-                    >
-                      Image
-                    </label>
-                    <input
-                      type="text"
-                      className="form-control validate"
-                      ref="image"
-                    />
-                  </div>
-                </div>
-                <div className="modal-footer d-flex justify-content-center">
-                  <button className="btn btn-danger" onClick={this.Addproduct}>
-                    ADD
-                  </button>
                 </div>
               </div>
             </div>
+            <div className="text-center"></div>
           </div>
-          <div className="text-center"></div>
+
+          <br />
+          <div className="row">
+            <div className="col-md-12 text-center">
+              <h3 style={{ color: "Green" }}><b>Cart</b></h3>
+            </div>
+          </div>
+          <br />
+          <div className="row">
+            {newProduct}
+          </div>
         </div>
       </>
     );
