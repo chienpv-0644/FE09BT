@@ -1,48 +1,28 @@
-/* .App {
-    margin: auto;
-    width: 300px;
-    border: 1px solid #ccc;
-    font-size: 20px;
-    padding: 10px;
-  } */
 .App {
   display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  text-align: center;
 }
 .App .model {
   width: 300px;
   border: 1px solid #ccc;
-  font-size: 20px;
+  font-size: 18px;
   padding: 10px;
   margin-right: 30px;
+  border-radius: 5px;
 }
 .App .model b {
   display: flex;
   justify-content: center;
 }
-.App .todoList {
-  padding: 10px 12px;
+.action div {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #ccc;
+  justify-content: space-between;
+  margin: 10px 0;
 }
-.App input[type='text']{
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  font-size: 24px;
-  color: #7a7a7a;
-  width: 100%;
-  padding: 0 20px;
-  box-sizing: border-box;
-}
-
-.App input[type='button'] {
-  padding: 5px 10px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-}
-
-.App input[type='button']:hover {
-  background-color: #bbb;
-  border: 1px solid #555;
+.action div .ant-input {
+  max-width: 200px;
 }
   

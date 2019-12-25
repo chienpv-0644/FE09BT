@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
 import TodoList from './components/TodoList';
+import { Icon, Button, Input } from 'antd';
+import 'antd/dist/antd.css'
 class App extends React.Component {
   constructor(props) {
     super(props)
@@ -70,28 +72,38 @@ class App extends React.Component {
       <div className="App">
         <div className="model">
           <div className="action">
-            <label>Name: </label>
-            <input type="text" 
-                placeholder="Name" 
-                value={newItem.name}
-                onChange={this.nameItem}
-            />
-            <label>Price: </label>
-            <input type="text" 
-                placeholder="Price" 
-                value={newItem.price}
-                onChange={this.priceItem}
-            />
-            <input type="button" value='Add' onClick={this.addItem}/>
+            <div>
+              <label>Name: </label>
+              <Input type="text" 
+                  placeholder="Name" 
+                  value={newItem.name}
+                  onChange={this.nameItem}
+              />
+            </div>
+            <div>
+              <label>Price: </label>
+              <Input type="text" 
+                  placeholder="Price" 
+                  value={newItem.price}
+                  onChange={this.priceItem}
+              />
+            </div>
+            <Button type="primary" icon="plus" onClick={this.addItem}>
+              Add
+            </Button>
           </div>
           <div className="action">
-            <label>Search: </label>
-            <input type="text" 
-                placeholder={filterItems} 
-                value={nameSearch}
-                onChange={this.nameSearch}
-            />
-            <input type="button" value='Search' onClick={this.searchItem}/>
+            <div>
+              <label>Search: </label>
+              <Input type="text" 
+                  placeholder={filterItems} 
+                  value={nameSearch}
+                  onChange={this.nameSearch}
+              />
+            </div>
+            <Button type="primary" icon="search" onClick={this.searchItem}>
+              Search
+            </Button>
           </div>
         </div>
         <div className='model'>
