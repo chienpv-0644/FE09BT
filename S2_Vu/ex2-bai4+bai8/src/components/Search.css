@@ -1,0 +1,22 @@
+.AddSearch {
+    width: 100%;
+    float: right;
+}
+
+
+.AddSearch input {
+    width: 30%;
+    padding: 10px;
+    border-radius: 30px;
+    outline: none;
+}
+
+.AddSearch button {
+    width: 120px;
+    padding: 10px; 
+    margin-left: 10px;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
