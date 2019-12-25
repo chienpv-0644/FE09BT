@@ -1,0 +1,19 @@
+.Heading {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    padding: 5px 10px;
+    align-items: center;
+}
+.Title {
+    display: flex;
+    justify-content: center;
+}
+.App {
+    margin-left: 20px;
+    display: flex;
+}
+.Cart {
+    width: 300px;
+    padding: 5px 10px;
+}
