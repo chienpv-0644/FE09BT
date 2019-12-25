@@ -11,11 +11,8 @@ function Data(props) {
     }
   return (
     <div style={{width: '100%' } }>
-            <div className="App" >
-        <AddForm className="Maincontent" addFoodFn={(states)=>handel(states)}/>
-        <SearchForm className="SideBar" list={data} key={lenList}/>
-
-            </div>
+        <AddForm addFoodFn={(states)=>handel(states)}/>
+        <SearchForm list={data} key={lenList}/>
     </div>
   );
 }
