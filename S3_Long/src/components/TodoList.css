@@ -1,0 +1,9 @@
+.ant-btn {
+    margin-right: 10px
+}
+.list {
+    width: 800px;
+}
+.selected { 
+    background-color: #e6f7ff;
+}
