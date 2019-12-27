@@ -1,0 +1,13 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.App {
+  display: flex;
+  width: 85%;
+  max-width: 1200px;
+  margin: auto;
+  background-color: #a2b1a2;
+}
+
+
