@@ -1,0 +1,12 @@
+.card-body--custom {
+    padding: 15px;
+}
+
+.card-title--custom {
+    color: #2db2d6;
+    font-weight: bold;
+}
+
+.card-text--custom {
+    letter-spacing: 1px;
+}

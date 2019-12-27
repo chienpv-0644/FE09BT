@@ -3,28 +3,29 @@ class Product extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      check: true
+      // check: true
     };
   }
-  Pay = () => {
-    
-    if(this.state.check)
-    {
-      alert("Bạn có chắc chắn mua ?");
-    this.setState({
-      check: false
-    });
-    }
-    else
-    {
-      alert("Bạn có chắc muốn hủy ?");
-      this.setState({
-        check: true
-      });
-    }
-  };
+  // Pay = () => {
+
+  //   if(this.state.check)
+  //   {
+  //     alert("Bạn có chắc chắn mua ?");
+  //   this.setState({
+  //     check: false
+  //   });
+  //   }
+  //   else
+  //   {
+  //     alert("Bạn có chắc muốn hủy ?");
+  //     this.setState({
+  //       check: true
+  //     });
+  //   }
+  // };
 
   render() {
+    //console.log(this.props);
     return (
       <>
         <div className="col-md-4 mb-5">
@@ -41,8 +42,13 @@ class Product extends Component {
               <p className="card-text">
                 <span className="badge badge-danger">{this.props.price}</span>
               </p>
-              <button className="btn btn-primary" onClick={this.Pay}>
-                {this.state.check ? "Mua ngay" : "Đã mua"}
+              <button
+                onClick={this.props.addToCart}
+                name={this.props.keyData}
+                value={this.props.name}
+                className="btn btn-primary"
+              >
+                Mua ngay
               </button>
             </div>
           </div>

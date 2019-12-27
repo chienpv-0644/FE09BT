@@ -1,0 +1,9 @@
+.card-img--custom {
+    padding: 15px;
+}
+
+@media only all and (max-width: 767px) {
+    .card-img--custom {
+        padding-bottom: 0;
+    }
+}
