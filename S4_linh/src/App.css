@@ -1,0 +1,25 @@
+* {
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  background-color: ghostwhite;
+}
+
+table, th, td {
+  margin-top: 10px;
+  border-collapse: collapse;
+}
+
+table {
+  width: 100%;
+}
+
+tr th {
+  background-color: steelblue;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+}
