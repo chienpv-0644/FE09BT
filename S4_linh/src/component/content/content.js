@@ -23,6 +23,8 @@ class Content extends React.Component{
         if(indexTodoEdit != -1) {
             arr.splice(indexTodoEdit, 1, {id, name})
             this.setState({
+                text: '',
+                id: null,
                 todos: arr
             })
         }

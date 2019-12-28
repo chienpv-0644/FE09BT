@@ -21,10 +21,6 @@ class FormEnter extends React.Component{
         return null
     }
 
-    componentDidMount(){
-        this.nameInput.focus();
-    }
-
     handleOnChange(e) {
         this.setState({
             [e.target.name] : e.target.value
