@@ -1,0 +1,30 @@
+.item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.item img {
+    position: relative;
+}
+.item .overlay {
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item .overlay .ant-btn {
+    display: none;
+}
+
+.item:hover .ant-btn {
+    display: block;
+}
+.item:hover .overlay{
+    content: '';
+    opacity: 1;
+    position: absolute;
+    background: #46ff4699;
+    height: 250px;
+}
+.desc {
+    padding: 5px 10px;
+}
