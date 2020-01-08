@@ -3,15 +3,16 @@ import Nuts from '../image/Nuts.png'
 import Orange from '../image/Orange.png'
 import Strawberry from '../image/Strawberry.png'
 const stateDefault = {
-    todos : [
+    items : [
         {
             id: 1,
             name: 'Cherry',
             price: '$1.99',
             image: {Cherry},
-            color: ['blue'],
+            color: ['#fa1'],
             desc: 'Two Cherries',
-            condition: 'Fresh'
+            condition: 'Fresh',
+            action: 'Compare'
         },
         {
             id: 2,
@@ -20,7 +21,8 @@ const stateDefault = {
             image: {Orange},
             color: ['red','blue','green'],
             desc: 'Giant Orange',
-            condition: 'Frozen'
+            condition: 'Frozen',
+            action: 'Compare'
         },
         {
             id: 3,
@@ -29,7 +31,8 @@ const stateDefault = {
             image: {Nuts},
             color: ['red','blue'],
             desc: 'Mixed Nuts',
-            condition: 'Frozen'
+            condition: 'Frozen',
+            action: 'Compare'
         },
         {
             id: 4,
@@ -38,36 +41,31 @@ const stateDefault = {
             image: {Strawberry},
             color: ['red','green'],
             desc: 'Just Strawberry',
-            condiiton: 'Fresh'
-        }
-    ],
-    compareItems: [
-        {
-            id: 1,
-            name: 'Cherry',
-            price: '$1.99',
-            image: {Cherry},
-            color: '',
-            desc: 'Two Cherries',
-            condition: 'Fresh'
-        },
-        {
-            id: 2,
-            name: 'Orange',
-            price: '$2.99',
-            image: {Orange},
-            color: '',
-            desc: 'Giant Orange',
-            condition: 'Frozen'
+            condition: 'Fresh',
+            action: 'Compare'
         }
     ]
 }
 export function reducer(state = stateDefault, action){
     switch(action.type) {
         case "COMPARE":
-            return state;
+            const compare = state.items.map(item => {
+                if(item.id === action.id) {
+                    item.action = 'Remove'
+                } 
+                return item
+            })
+            console.log('compare')
+            return { items: [...compare] }
         case "REMOVE":
-            return state;
+            const remove = state.items.map(item => {
+                if(item.id === action.id) {
+                    item.action = 'Compare'
+                } 
+                return item
+            })
+            console.log('remove')
+            return { items: [...remove] }
         default: return state
     }
 }

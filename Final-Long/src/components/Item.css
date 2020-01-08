@@ -10,6 +10,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    background: #48cfad8c;
+    height: 300px;
+    transition-duration: 0.5s;
+}
+.item .show {
+    opacity: 1!important;
 }
 .item .overlay .ant-btn {
     display: none;
@@ -19,11 +26,7 @@
     display: block;
 }
 .item:hover .overlay{
-    content: '';
     opacity: 1;
-    position: absolute;
-    background: #46ff4699;
-    height: 250px;
 }
 .desc {
     padding: 5px 10px;

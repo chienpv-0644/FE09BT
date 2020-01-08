@@ -1,8 +1,10 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Table } from 'antd'
+import { Table, Icon } from 'antd'
+import './Compare.css'
 function Compare(props) {
-    const { compareItems } = props
+    const { items } = props
+    const compareItems = items.filter(item => item.action === 'Remove')
     const columns = [
         {
           title: 'Name',
@@ -18,24 +20,43 @@ function Compare(props) {
           title: 'Color',
           dataIndex: 'color',
           key: 'color',
+          render: colors => (
+            <span>
+              {
+                colors.map((color, index) => (
+                  <Icon type="heart" theme="filled" style={{color}} key={index}/>
+                ))
+              }
+            </span>
+          )
         },
         {
           title: 'Condition',
           dataIndex: 'condition',
           key: 'condition',
+          render: condition => (
+            <div className={condition}>
+              {condition}
+            </div>
+          )
         },
       ];
     return (
         <>
             {
-                compareItems.length > 1 && <Table dataSource={compareItems} columns={columns} />
+                compareItems.length > 1 
+                && <Table 
+                      dataSource={compareItems} 
+                      columns={columns} 
+                      rowKey={(_,index) => index + 1}
+                    />
             }
         </>
     )
 }
 const mapState = (state)=>{
     return {
-        compareItems: state.compareItems
+        items: state.items
     }
 }
 export default connect(mapState)(Compare)
