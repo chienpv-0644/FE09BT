@@ -1,0 +1,54 @@
+.tableProduct {
+    table-layout: fixed;
+}
+
+.compare table tr>th{
+    padding: 25px;
+}
+
+.compare table tr>td{
+    padding: 25px;
+}
+
+.compare table th {
+    font-size: 20px;
+    color: #393c45;
+    font-weight: 400;
+}
+
+.color {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.bg-red {
+    background-color: #ff715b;
+}
+
+.bg-green {
+    background-color: #48cfad;
+}
+
+.bg-blue {
+    background-color: #0197f6;
+}
+
+.bg-pink {
+    background-color: #ffa4c3;
+}
+
+.condition {
+    color: white;
+    text-align: center;
+}
+
+.bg-Fresh {
+    background-color: #48cfad;
+}
+
+.bg-Frozen {
+    background-color: #ff715b;
+}

@@ -1,0 +1,90 @@
+.product {
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.imageProduct {
+    position: relative;
+}
+.imageProduct::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(72, 207, 173, 0);
+    transition: 0.3s;
+}
+
+.product:hover > .imageProduct::before {
+    background-color: rgba(72, 207, 173, 0.6);
+}
+
+.buttonProduct {
+    display: none;
+    outline-color: unset;
+    background-color: unset;
+    border: 2px solid white;
+    color: #fff;
+    font-size: 19px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 10px 0;
+    width: 172px;
+    position: absolute;
+    bottom: 55%;
+    left: 50%;
+    transform: translateY(50%) translateX(-50%);
+    transition: 0.5s;
+    animation-name: 'buttonHover';
+    animation-duration: 2s;
+}
+
+button:focus {
+    outline-color: unset;
+}
+
+@keyframes buttonHover {
+    from {font-size: 19px;
+    bottom: 55%}
+    to {font-size: 16px;
+    bottom: 50%}
+}
+
+.buttonProduct:hover {
+    background-color: white;
+    color: rgba(72, 207, 173, 1);
+}
+
+.product:hover > .imageProduct > button {
+    display: block;
+    animation-name: 'buttonHover';
+    animation-duration: 2s;
+}
+
+.product:hover {
+    box-shadow: 0 13px 21px -5px rgba(0,0,0,.2);
+}
+
+.about {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    font-size: 22px;
+    color: #393c45;
+}
+
+.price {
+    color: #48cfad;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.compare .imageProduct::before {
+    background-color: rgba(72, 207, 173, 0.5);
+}
